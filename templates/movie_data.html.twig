@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-lg-3 col-md-6 my-4">
+        <img class="w-100" src="{{ asset(posters_public_directory ~  movie.poster) }}" title="{{ movie.title }}">
+    </div>
+    <div class="col-lg-9 col-md-6 my-5">
+        <h1>{{ movie.title }}</h1>
+        <p class="text-muted">{{ movie.releaseDate | date("d/m/Y") }} · {{ movie.genre.name }}</p>
+        <h2><em>{{ movie.tagline }}</em></h2>
+        <h5 class="text-muted">Overview</h5>
+        <p>{{ movie.overview }}</p>
+        <p class="text-muted">Rating: {{ movie.rating }}</p>
+        {% if app.user %}
+            {{ form_start(form, {attr: {class: 'form-inline'}}) }}
+            {{ form_widget(form) }}
+            <button type="submit" class="btn btn-primary">Rate!</button>
+            {{ form_end(form) }}
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ movie }}{% endblock %}
+
+{% block body %}   
+    {% if movie %}
+        {{ include ('movie_data.html.twig', {'movie': movie }) }}
+    {% else %}
+        <p>Movie not found</p>
+    {% endif %}
+{% endblock %}
+
+

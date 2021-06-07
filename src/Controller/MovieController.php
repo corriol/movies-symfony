@@ -22,6 +22,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/*
+    Name
+    https://restfulapi.net/resource-naming/
+*/
+
 class MovieController extends AbstractController
 {
 
